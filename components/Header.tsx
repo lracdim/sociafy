@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate, theme, onToggl
         <header className="sticky top-0 z-50 bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
             <nav className="container mx-auto px-4 flex justify-between items-center py-4">
                 <button onClick={() => onNavigate('home')} className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
-                    Sociafy
+                    Socmedify
                 </button>
                 <div className="flex items-center gap-2">
                     <div className="hidden md:flex items-center gap-6 mr-4">

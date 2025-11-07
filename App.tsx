@@ -1,5 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/next"
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import CpmBreakdown from './components/CpmBreakdown';
@@ -95,6 +96,7 @@ function App() {
         {currentPage === 'privacy' && <PrivacyPage onBackToCalculator={() => handleNavigate('home')} />}
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
