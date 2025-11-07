@@ -1,6 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import CpmBreakdown from './components/CpmBreakdown';
