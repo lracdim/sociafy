@@ -1,5 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Analytics } from "@vercel/analytics/react"
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -66,6 +67,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 selection:bg-purple-500/20">
+      <Helmet>
+        <title>{currentPage === 'home' ? 'Sociafy – Your Views Calculator' :
+                 currentPage === 'about' ? 'About Sociafy' :
+                 'Privacy Policy - Sociafy'}</title>
+        <meta name="description" content={currentPage === 'home' ? 'Sociafy is your views calculator. Calculate and understand your social media views and engagement.' :
+                                         currentPage === 'about' ? 'Learn more about Sociafy, the social media views calculator.' :
+                                         'Read the privacy policy for Sociafy.'} />
+      </Helmet>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:bg-gray-950 dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#c9d1ff,transparent)] dark:bg-[radial-gradient(circle_500px_at_50%_200px,#3b0764,transparent)]"></div>
       </div>
